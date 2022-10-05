@@ -5,7 +5,7 @@
 
   $('.portfolio-box').click(function() {
     if ((selected?.id) == this.id) {
-      console.log(this.id);
+      console.log(this.id+"usnelected");
       $('.portfolio-box').removeClass('col-lg-2');
       $('.portfolio-box').addClass('col-lg-4');
       $(selected).removeClass('selected-portfolio');
@@ -15,13 +15,13 @@
       $(selected)?.removeClass('selected-portfolio');
       $('.portfolio-content#' + selected?.id).css('display', 'none');
       selected = this;
-      console.log(this.id);
+      console.log(this.id+"selected");
       if ($('.portfolio-box').hasClass('col-lg-4')) {
         $('.portfolio-box').removeClass('col-lg-4');
         $('.portfolio-box').addClass('col-lg-2');
       }
       $(this).addClass('selected-portfolio');
-      $('.portfolio-content#' + selected.id).css('display', 'flex');
+      $('.portfolio-content#' + this.id).css('display', 'flex');
     }
   });
 

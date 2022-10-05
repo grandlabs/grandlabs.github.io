@@ -193,7 +193,7 @@ header.masthead {
   max-width: 650px;
   margin: 0 auto;
   background: var(--main-color);
-  border: 5px solid white;
+  border: 5px solid white ;
   cursor: pointer;
 }
   .portfolio-box:before {
@@ -232,7 +232,7 @@ header.masthead {
     opacity: 1; }
   .portfolio-box:focus {
     outline: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 1403px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
       font-size: 16px; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
@@ -277,6 +277,7 @@ header.masthead {
 
 .portfolio-content {
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -286,3 +287,45 @@ header.masthead {
   background-color: var(--main-darker) !important;
 }
 
+.about {
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.headshot {
+  display: flex;
+  position: relative;
+  width: 80%;
+  border: 2px solid white;
+  background-color: var(--main-color);
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+  .headshot:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+.portfolio-app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.portfolio-apptext,
+.portfolio-webtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appshot,
+.portfolio-apptext {
+  width: 300px;
+}
+.webshot,
+.portfolio-webtext {
+  width: 30vw;
+}
